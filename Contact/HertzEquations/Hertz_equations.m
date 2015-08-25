@@ -6,7 +6,7 @@ function s = Hertz_equations(nu, varargin)
 
 % nu: Poisson's coefficient (0 to 0.5)
 
-% author: D. Mercier
+% author: d.mercier@mpie.de
 
 close all;
 

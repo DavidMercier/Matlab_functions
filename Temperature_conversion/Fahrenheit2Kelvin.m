@@ -2,6 +2,8 @@
 function TK = Fahrenheit2Kelvin(TF, varargin)
 %% Function to convert temperature in °F to temperature in K
 
+% author: d.mercier@mpie.de
+
 % TF: Temperature in °F
 % TK: Temperature in K
 

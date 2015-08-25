@@ -4,6 +4,8 @@ function lambdaFit = lambda(Esub, Eind, varargin)
 % ratio between Young's modulus of a substrate and Young's modulus of the
 % indenter, in the case of substrate indentation with a flat punch
 
+% author: d.mercier@mpie.de
+
 % See PhD thesis of Diop M.D., "Contribution à l'étude mécanique et électrique
 % du contact localisé : Adaptation de la nanoindentation à la microinsertion." (2009).
 % ... and see Jordan E. H. et Urban M. R. (1999) - DOI: 10.1016/S0043-1648(99)00284-7

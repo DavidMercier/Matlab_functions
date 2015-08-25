@@ -3,6 +3,8 @@ function load = loadPlate(E_plate, t_plate, nu_plate, r_Plate, disp, varargin)
 %% Function giving the load function for large deflections of circular plates,
 % loaded at the center
 
+% author: d.mercier@mpie.de
+
 % See Timoshenko S.P. and Woinowsky-Krieger S., "Theory of plates and
 % shells" (1987) - ISBN : 978-0-07-064779-4
 % See Chapter 13 - Large deflections of plates

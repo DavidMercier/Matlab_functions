@@ -3,6 +3,8 @@ function radius = radiusPlate(E_plate, t_plate, nu_plate, load_Plate, disp, vara
 %% Function giving the expression of the radius of a circular plate,
 % loaded at the center in function of the applied load.
 
+% author: d.mercier@mpie.de
+
 % See Timoshenko S.P. and Woinowsky-Krieger S., "Theory of plates and
 % shells" (1987) - ISBN : 978-0-07-064779-4
 % See Chapter 13 - Large deflections of plates

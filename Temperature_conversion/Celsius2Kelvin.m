@@ -2,6 +2,8 @@
 function TK = Celsius2Kelvin(TC, varargin)
 %% Function to convert temperature in °C to temperature in K
 
+% author: d.mercier@mpie.de
+
 % TC: Temperature in °C
 % TK: Temperature in K
 

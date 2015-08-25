@@ -3,6 +3,8 @@ function radialStress = radialStressPlate(E_plate, t_plate, r_Plate, disp, varar
 %% Function giving the expression of the radial tensil stress in the plate
 % loaded at the center.
 
+% author: d.mercier@mpie.de
+
 % See Timoshenko S.P. and Woinowsky-Krieger S., "Theory of plates and
 % shells" (1987) - ISBN : 978-0-07-064779-4
 % See Chapter 13 - Large deflections of plates
