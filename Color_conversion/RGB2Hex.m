@@ -1,6 +1,8 @@
 %% Copyright 2014 MERCIER David
 function Hex = RGB2Hex(RGB, varargin)
 %% Function to convert RGB color to Hex color
+% RGB for red, green and blue color levels (0..255)
+% Hex for 6 digits hex color
 
 % author: d.mercier@mpie.de
 
