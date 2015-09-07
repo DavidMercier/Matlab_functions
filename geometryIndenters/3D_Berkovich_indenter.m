@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function [ptc, handle_indax]  = preCPFE_3d_Berkovich_indenter(X_position, Y_position, Z_position, szFac, rotation_angle, varargin)
 %% Function to plot a 3D Berkovich indenter
 % X_position, Y_position, Z_position : Coordinates of the center of the indenter.
