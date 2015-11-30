@@ -7,6 +7,6 @@ Developed with Matlab R2015a.
 
 Author
 ----------
-Written by D. Mercier [1] (d.mercier@mpie.de / david9684@gmail.com).
+Written by D. Mercier [1] (david.mercier@crmgroup.be / david9684@gmail.com).
 
-[1] Max-Planck-Institut für Eisenforschung, 40237 Düsseldorf, Germany
+[1] CRM Group, 4000 Liège, Belgium (`www.crmgroup.be <www.crmgroup.be>`_)
