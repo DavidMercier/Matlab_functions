@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function W = ODF_W_function(phi2, alpha, varargin)
 % Gaussian distribution function to describe a texture
 % See Li J.Y. /  J. Mech. Phys. Solids 48 (2000) 529-552
@@ -42,6 +43,7 @@ for ii = 1:length(alpha)
     hold on;
 end
 
+% Plot options
 xlim(gca, [0, 1]);
 ylim(gca, [0, 1.5]);
 xlabel('Euler angle - \phi_2')
