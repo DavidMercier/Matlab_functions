@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function s = Hertz_equations(nu, varargin)
 %% Stress distributions at the surface and along the axis of symmetry
 % causes by Hertz pressure acting on a circular area radius a.
@@ -6,7 +7,7 @@ function s = Hertz_equations(nu, varargin)
 
 % nu: Poisson's coefficient (0 to 0.5)
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 close all;
 

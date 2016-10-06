@@ -1,8 +1,9 @@
+%% Copyright 2014 MERCIER David
 function nu = coeff_poisson(C12, C44, varargin)
 % C12 and C14 : compliances in TPa
 % nu: Poisson's coefficient
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 % [LEVY 2001] : "Handbook of elastic properties of solids, liquids and
 % gases" by M. Levy, H.E. Bass and R.S. Stern (Vol. 2 - Elastic

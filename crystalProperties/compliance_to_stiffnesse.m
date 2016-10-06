@@ -1,10 +1,11 @@
+%% Copyright 2014 MERCIER David
 function compliances = compliance_to_stiffnesse(structure, elast_const, varargin)
 %% Function used to give the elastic stiffness constants in 1/GPa
 % structure : structure of the given material (hcp, bcc, fcc, dia, tet or bct)
 % elast_const: [S11 S12 S13 S33 S44 S66] in 1/TPa;
 % compliances: [C11 C12 C13 C33 C44 C66] in TPa;
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 % From J.F. Nye, "Physical properties of crystals - Their representation by
 % tensors and matrices." (1985) Oxford Univ. Presse (p. 147)

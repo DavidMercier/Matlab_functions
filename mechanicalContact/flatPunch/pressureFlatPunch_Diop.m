@@ -3,7 +3,7 @@ function pValues = pressureFlatPunch_Diop(Esub, Eind, load, ae, varargin)
 %% Function giving the pressure at the interface between a flat punch
 % and an elastic half-space
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 % See PhD thesis of Diop M.D., "Contribution à l'étude mécanique et électrique
 % du contact localisé : Adaptation de la nanoindentation à la microinsertion." (2009).

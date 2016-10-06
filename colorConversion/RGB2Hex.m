@@ -4,7 +4,7 @@ function Hex = RGB2Hex(RGB, varargin)
 % RGB for red, green and blue color levels (0..255)
 % Hex for 6 digits hex color
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 1
     RGB = [randi(255) randi(255) randi(255)];

@@ -5,7 +5,7 @@ function HSL = RGB2HSL(RGB, varargin)
 % Hue (H) in degrees (º), saturation (S) and lightness (L) (0..100%)
 % 0 <= H < 360, 0 <= S <= 1 and 0 <= L <= 1
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 1
     RGB = [randi(255) randi(255) randi(255)];

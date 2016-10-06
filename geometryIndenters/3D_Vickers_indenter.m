@@ -5,7 +5,7 @@ function [ptc, handle_indax]  = preCPFE_3d_Vickers_indenter(X_position, Y_positi
 % szFac: Factor to scale indenter size.
 % rotation_angle: Rotation angle of the 3D plot (from 0 to 360°) in degrees.
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 5
     rotation_angle = 0; % in degrees

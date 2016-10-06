@@ -1,8 +1,11 @@
+%% Copyright 2014 MERCIER David
 function coneIndentation(E, nu, beta, Y, varargin)
 %% Relationship between the dimensionless quantities H/Y and the indentation index.
 % From "Nanostructured Thin Films and Coatings Mechanical Properties"
 % Sam Zhang (2010) (ISBN:9781420094022)
 % Equations are p.184-185
+
+% author: david9684@gmail.com
 
 % H: hardness (in GPa)
 % E: elastic modulus (in GPa)

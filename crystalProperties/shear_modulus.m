@@ -1,10 +1,10 @@
-% Copyright 2013 Max-Planck-Institut für Eisenforschung GmbH
+%% Copyright 2014 MERCIER David
 function G = shear_modulus(C12, C44, varargin)
 % E : Young's modulus in TPa
 % nu: Poisson's coefficient
 % G : Shear modulus in TPa
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 2
     % Elastic constants of the Titanium (hcp)

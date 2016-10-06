@@ -2,7 +2,7 @@
 function TC = Fahrenheit2Celsius(TF, varargin)
 %% Function to convert temperature in °C to temperature in °F
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 % TC: Temperature in °C
 % TF: Temperature in °F

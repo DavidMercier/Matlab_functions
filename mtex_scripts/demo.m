@@ -1,10 +1,11 @@
-% Copyright 2013 Max-Planck-Institut für Eisenforschung GmbH
-% author: d.mercier@mpie.de
+%% Copyright 2014 MERCIER David
 
 % Matlab code using MTEX toolbox for analysis of EBSD data
 % Source code : https://github.com/mtex-toolbox/mtex
 % Doc : http://mtex-toolbox.github.io/
 % Doc : http://mtex-toolbox.github.io/files/doc/funcref_cat.html
+
+% author: david9684@gmail.com
 
 %% Initialization
 clc; clear all;

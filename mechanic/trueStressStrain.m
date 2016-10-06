@@ -3,7 +3,7 @@ function [true_strain, true_stress] = trueStressStrain(...
     engineering_stress, engineering_strain, varargin)
 %% Function giving the true stress-strain curve
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 2
     engineering_strain = [0 5 10 15 20 25 30 35 40]/100; % in %

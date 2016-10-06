@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function Rtunnel = tunnelResistance(h, e, me, phi, tf, ac, varargin)
 %% Calculation of the electical tunnel resistance in the case of metallic contact
 % with an oxide at the interface at low loads.
@@ -12,6 +13,8 @@ function Rtunnel = tunnelResistance(h, e, me, phi, tf, ac, varargin)
 % phi: energy of the metal-oxide-metal barrier in eV
 % tf: film thickness in nm
 % ac: contact radius in µm
+
+% author: david9684@gmail.com
 
 close all;
 

@@ -5,7 +5,8 @@ function [E_homo, nu_homo] = MT_homoScheme(modulusMatrix, modulusParticle, ...
 % From J. Nemecek, Habilitation thesis, "Nanoindentation of Heterogeneous
 % Structural Materials", 2009.
 
-% author: david.mercier@crmgroup.be
+% author: david9684@gmail.com
+
 % volFracParticle: Volume fraction of particles (= 1 - volFracMatrix)
 % modulusMatrix: Elastic modulus of the matrix (in GPa)
 % modulusParticle: Elastic modulus of the particles (in GPa)

@@ -5,7 +5,7 @@ function HSV = RGB2HSV(RGB, varargin)
 % Hue (H) in degrees (º), saturation (S) and value (V) (0..100%)
 % 0 <= H < 360, 0 <= S <= 1 and 0 <= V <= 1
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 1
     RGB = [randi(255) randi(255) randi(255)];

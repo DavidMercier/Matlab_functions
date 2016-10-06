@@ -4,7 +4,7 @@ function W = ODF_W_function(phi2, alpha, varargin)
 % See Li J.Y. /  J. Mech. Phys. Solids 48 (2000) 529-552
 % DOI : 10.1016/S0022-5096(99)00042-3
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 % phi2 : Euler angles in rad
 % alpha : Parameter in Gaussian distribution function

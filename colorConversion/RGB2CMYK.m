@@ -4,7 +4,7 @@ function CMYK = RGB2CMYK(RGB, varargin)
 % RGB for red, green and blue color levels (0..255)
 % CMYK for cyan, magenta, yellow, black
 
-% author: d.mercier@mpie.de
+% author: david9684@gmail.com
 
 if nargin < 1
     RGB = [randi(255) randi(255) randi(255)];

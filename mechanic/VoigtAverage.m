@@ -4,7 +4,7 @@ function voigtAverage = VoigtAverage(property, volumeFraction, varargin)
 % From "Mechanical Behavior of Materials", by Meyers M and Chawla K.,
 % 2nd edition, 2008.
 
-% author: david.mercier@crmgroup.be
+% author: david9684@gmail.com
 
 if nargin < 2
     volumeFraction = [20 30 50]/100; % in %

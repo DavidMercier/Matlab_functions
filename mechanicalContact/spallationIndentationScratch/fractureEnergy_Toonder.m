@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function Gamma = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta, varargin)
 %% Calculation of fracture energy from indentation or scratch tests
 % From J. den Toonder et al., "Fracture toughness and adhesion energy of

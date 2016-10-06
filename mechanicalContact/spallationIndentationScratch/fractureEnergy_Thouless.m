@@ -1,3 +1,4 @@
+%% Copyright 2014 MERCIER David
 function Gamma = fractureEnergy_Thouless(E, t, a, L, beta, varargin)
 %% Calculation of fracture energy from indentation or scratch tests
 % From M.D. Thouless, "An analysis of spalling in the microscratch test",
