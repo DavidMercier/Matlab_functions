@@ -30,7 +30,7 @@ if nargin < 1
     gammaVal = fractureEnergy_Thouless(E, t, a, L, beta);
     figure;
     plot(t, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
-    title('Young''s modulus = 20 GPa / a = 4 \mum / L = 13 \mum / beta = 60°');
+    title('Young''s modulus = 20 GPa / a = 4 \mum / L = 13 \mum / \beta = 60°');
     xlabel('Coating thickness (in micron)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);
@@ -47,7 +47,7 @@ if nargin < 1
     gammaVal = fractureEnergy_Thouless(E, t, a, L, beta);
     figure;
     plot(E, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
-    title('Coating thickness = 1 \mum / a = 4 \mum / L = 13 \mum / beta = 60°');
+    title('Coating thickness = 1 \mum / a = 4 \mum / L = 13 \mum / \beta = 60°');
     xlabel('Young''s modulus (in GPa)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);

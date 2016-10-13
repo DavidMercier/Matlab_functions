@@ -41,7 +41,7 @@ if nargin < 1
     gammaVal = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta);
     figure;
     plot(t, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
-    title('Young''s modulus = 20GPa / \nu = 0.3 / a = 4 \mum / L = 13 \mum / beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
+    title('Young''s modulus = 20GPa / \nu = 0.3 / a = 4 \mum / L = 13 \mum / \beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
     xlabel('Coating thickness (in micron)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);
@@ -60,7 +60,7 @@ if nargin < 1
     gammaVal = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta);
     figure;
     plot(E, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
-    title('Coating thickness = 1 \mum / \nu = 0.3 / a = 4 \mum / L = 13 \mum / beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
+    title('Coating thickness = 1 \mum / \nu = 0.3 / a = 4 \mum / L = 13 \mum / \beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
     xlabel('Young''s modulus (in GPa)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);
@@ -79,7 +79,7 @@ if nargin < 1
     gammaVal = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta);
     figure;
     plot(sigmaRes, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
-    title('Young''s modulus = 20GPa / Coating thickness = 1 \mum / \nu = 0.3 / a = 4 \mum / L = 13 \mum / beta = 60°', 'Color', [0,0,0], 'FontSize', 14);
+    title('Young''s modulus = 20GPa / Coating thickness = 1 \mum / \nu = 0.3 / a = 4 \mum / L = 13 \mum / \beta = 60°', 'Color', [0,0,0], 'FontSize', 14);
     xlabel('Residual stress (in GPa)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);
@@ -104,7 +104,7 @@ if nargin < 1
     t_mat = t(ones(1,length(E)), :);
     figure;
     surf(E_mat', t_mat, gammaVal_mat);
-    title('\nu = 0.3 / a = 4 \mum / L = 13 \mum / beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
+    title('\nu = 0.3 / a = 4 \mum / L = 13 \mum / \beta = 60° / \sigma_r = 50 MPa', 'Color', [0,0,0], 'FontSize', 14);
     xlabel('Young''s modulus (in GPa)', 'Color', [0,0,0], 'FontSize', 14);
     ylabel('Coating thickness (in micron)', 'Color', [0,0,0], 'FontSize', 14);
     zlabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
