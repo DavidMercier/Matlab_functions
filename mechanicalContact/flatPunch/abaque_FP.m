@@ -16,7 +16,7 @@ mean_Pressure = 1e-9 * (X ./ Y); % Mean pressure in GPa
 A = axes;
 surf(X,Y,mean_Pressure);
 set(A,'ZScale','log');
-xlabel('Applied lod in N');
+xlabel('Applied load in N');
 ylabel('Contact area in m²');
 zlabel('Mean pressure in GPa');
 
