@@ -3,10 +3,10 @@ Various Matlab functions
 
 Matlab version
 ------------------
-Developed with Matlab R2015a.
+Developed with Matlab R2014a and R2015a.
 
 Author
 ----------
 Written by D. Mercier [1] (david.mercier@crmgroup.be / david9684@gmail.com).
 
-[1] CRM Group, 4000 Liège, Belgium (`www.crmgroup.be <www.crmgroup.be>`_)
+[1] CRM Group, 4000 LiÃ¨ge, Belgium (`www.crmgroup.be <www.crmgroup.be>`_)
