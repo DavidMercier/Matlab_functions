@@ -13,7 +13,7 @@ function Gamma = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta, varargin
 % of the potential of quantitative coating adhesion measurement by scratch
 % testing", Tribology Intern., 39, 2009, pp. 99-114.
 
-% Gamma: Fracture energy in J = 1e6 N.m = 1e3 GPa.µm
+% Gamma: Fracture energy in J/m2 = 1e6 N.m = 1e3 GPa.µm
 
 % E: Elastic modulus in GPa
 % nu: Poisson's coefficient (0 to 0.5)
