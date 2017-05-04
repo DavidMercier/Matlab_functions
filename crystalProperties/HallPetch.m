@@ -10,28 +10,31 @@ clc;
 close all;
 
 if nargin < 2
-    S = [2.8 1.7 1.5]*1e3;
-    d = [7 20 30];
+    S = [2.8 1.7]*1e3;
+    d = [8 20];
 end
 
-xdata = d.^(-0.5);
-ydata = S;
+xdata_1 = d.^(-0.5);
+ydata_1 = S;
+xdata_2 = d;
+ydata_2 = S;
+xlabels{1} = '{\surd}d in m^{-2}'; % Latex interpreter doesn't work...
+xlabels{2} = 'Grain size (d) in m';
+ylabels{1} = 'Hardness in MPa';
+ylabels{2} = 'Hardness in MPa';
+minX = 0.1;
+maxX = 1;
 
-figure;
-plot(xdata, ydata, '+r');
-xlabel('{\surd}d in m^{-2}'); % Latex interpreter doesn't work...
-ylabel('Hardness in MPa');
-xlim([0, 1.2*max(xdata)]);
-ylim([0, 1.2*max(ydata)]);
+[ax,hlT,hlS] = plotxx(xdata_1,ydata_1,xdata_2,ydata_2,xlabels,ylabels, ...
+    minX, maxX);
+axes(ax(1));
+xlim([minX, maxX]);
+ylim([0, round(1.2*max(ydata_1))]);
 grid on;
-hold on;
 
-% ax1 = gca; % current axes
-% ax1_pos = get(ax1,'Position');
-% ax2 = axes('Position',ax1_pos,...
-%     'XAxisLocation','top',...
-%     'YAxisLocation','right',...
-%     'Color','none');
+axes(ax(2));
+ylim([0, round(1.2*max(ydata_2))]);
+grid on;
 
 HP_model = @(S, d) S - HP(1) - (HP(2)./sqrt(d));
 
@@ -52,9 +55,11 @@ else
     model = @LMS;
     HP_fit = fminsearch(model, HP_guess);
     warning('No Optimization toolbox available !');
-    HP_fit_plot = HP_fit(1) + HP_fit(2).*xdata;
-    line(xdata, HP_fit_plot);
 end
+
+axes(ax(1));
+HP_fit_plot = HP_fit(1) + HP_fit(2).*xdata_1;
+line(xdata_1, HP_fit_plot);
 
     function [sse, FittedCurve] = LMS(params)
         FittedCurve = params(1) + (params(2)./sqrt(d));
@@ -62,6 +67,7 @@ end
         sse = sum(residual .^ 2);
     end
 
+axes(ax(2));
 HP_parameters = HP_fit;
 
 end
