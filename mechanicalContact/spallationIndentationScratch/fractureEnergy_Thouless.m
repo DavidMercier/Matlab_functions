@@ -18,7 +18,7 @@ function Gamma = fractureEnergy_Thouless(E, t, a, L, beta, varargin)
 
 % author: david9684@gmail.com
 
-close all;
+%close all;
 
 if nargin < 1
     % Experimental values obtained for a sol-gel coating.
@@ -28,7 +28,7 @@ if nargin < 1
     L = 13; % in µm
     beta = 60; % in degrees for a Berkovich indenter during indentation
     gammaVal = fractureEnergy_Thouless(E, t, a, L, beta);
-    figure;
+    figure(1);
     plot(t, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
     title('Young''s modulus = 20 GPa / a = 4 \mum / L = 13 \mum / \beta = 60°');
     xlabel('Coating thickness (in micron)', 'Color', [0,0,0], 'FontSize', 14);
@@ -36,7 +36,7 @@ if nargin < 1
     set(gca, 'FontSize', 14);
     grid on;
     ylim([0 1]);
-    save_figure(pwd, gca);
+    %save_figure(pwd, gca);
     
     % Experimental values obtained for a sol-gel coating.
     E = 1:1:300; % in GPa
@@ -45,7 +45,7 @@ if nargin < 1
     L = 13; % in µm
     beta = 60; % in degrees for a Berkovich indenter during indentation
     gammaVal = fractureEnergy_Thouless(E, t, a, L, beta);
-    figure;
+    figure(2);
     plot(E, gammaVal, 'b-', 'LineWidth', 2, 'MarkerSize', 10);
     title('Coating thickness = 1 \mum / a = 4 \mum / L = 13 \mum / \beta = 60°');
     xlabel('Young''s modulus (in GPa)', 'Color', [0,0,0], 'FontSize', 14);
@@ -53,7 +53,7 @@ if nargin < 1
     set(gca, 'FontSize', 14);
     grid on;
     ylim([0 5]);
-    save_figure(pwd, gca);
+    %save_figure(pwd, gca);
 end
 
 X = (tand(beta) + (2*a/L))/(tand(beta) + (a/L));

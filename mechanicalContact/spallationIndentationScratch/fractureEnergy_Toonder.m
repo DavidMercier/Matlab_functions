@@ -27,9 +27,9 @@ function Gamma = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta, varargin
 
 % author: david9684@gmail.com
 
-close all;
-
 if nargin < 1
+    close all;
+    
     % Experimental values obtained for a sol-gel coating.
     E = 20; % in GPa
     nu = 0.3; % Poisson's coefficient
@@ -47,7 +47,6 @@ if nargin < 1
     set(gca, 'FontSize', 14);
     grid on;
     ylim([0 1]);
-    save_figure(pwd, gca);
     
     % Experimental values obtained for a sol-gel coating.
     E = 1:1:300; % in GPa
@@ -66,7 +65,6 @@ if nargin < 1
     set(gca, 'FontSize', 14);
     grid on;
     ylim([0 5]);
-    save_figure(pwd, gca);
     
     % Experimental values obtained for a sol-gel coating.
     E = 20; % in GPa
@@ -84,7 +82,6 @@ if nargin < 1
     ylabel('Fracture energy - \Gamma (in J)', 'Color', [0,0,0], 'FontSize', 14);
     set(gca, 'FontSize', 14);
     grid on;
-    save_figure(pwd, gca);
     
     % Experimental values obtained for a sol-gel coating.
     E = 1:1:300; % in GPa
@@ -112,11 +109,10 @@ if nargin < 1
     grid on;
     view(-20, 20);
     shading interp;
-    save_figure(pwd, gca);
     
 end
 
-X = ((a/L) + ((beta*pi)/2))/((a/L) + (beta*pi));
+X = ((a./L) + ((beta.*pi./180)./2))./((a./L) + (beta.*pi./180));
 
 Gamma = (1.42 .* (E.*(t.^5)./(L.^4)) .* (X).^2 + ...
     ((t.*(1-nu).*(sigmaRes.^2))./E) + ...
