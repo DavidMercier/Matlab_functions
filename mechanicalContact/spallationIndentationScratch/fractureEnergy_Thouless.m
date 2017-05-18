@@ -6,7 +6,7 @@ function Gamma = fractureEnergy_Thouless(E, t, a, L, beta, varargin)
 % This simple equation can be used to calculate fracture energy from
 % scratch tests.
 
-% Gamma: Fracture energy in J/m2 = 1e6 N.m = 1e3 GPa.µm
+% Gamma: Fracture energy in J/m2 = 1 N/m = 1Pa.m = 1e-3 GPa.µm = 1e-6 MPa.m
 
 % E: Elastic modulus in GPa
 % t: Coating thickness in µm
