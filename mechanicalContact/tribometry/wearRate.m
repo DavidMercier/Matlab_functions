@@ -1,5 +1,5 @@
 %% Copyright 2017 MERCIER David
-function [wR_w, wR_w_approx, wR_wh] = wearRate(r, w, h, R, F, L, varargin)
+function [wR, wR_approx] = wearRate(r, w, h, R, F, L, varargin)
 %% Calculation of wear rate from pin-on-disk tribometer experiments
 % From "Standard Test Method for Wear Testing with a Pin-on-Disk Apparatus", ASTM G99-05, 2010.
 % From "Norme française pour la Détermination du taux d’usure selon la méthode pin-on-disk", NF EN 1071-13, AFNOR Normalisation, 2010.
@@ -13,8 +13,6 @@ function [wR_w, wR_w_approx, wR_wh] = wearRate(r, w, h, R, F, L, varargin)
 % S: cross-sections (m^2)
 % V: worn volume of the sample (m^3)
 % wR: wear rate in (m^2/N)
-% _w and _wh: Extension of variable name in function of the geometrical
-% approach for the calcul of cross-sections
 
 % Only valid if assuming no significant pin wear !
 % This  is  an approximate geometric relation that is correct to 1%
@@ -42,31 +40,25 @@ if (mean(w)/r) > 0.3 && (mean(w)/r) < 0.8
 end
 
 % Calculation of cross-sections (S) in m^2
-S_w = zeros(1,4);
-S_wh = zeros(1,4);
+S = zeros(1,4);
 for ii = 1:4
-    S_w(ii) = ((r^2) * asin(w(ii)/(2*r))) - ((w(ii)/4)*(4*(r^2)-(w(ii)^2))^(0.5));
-    S_wh(ii) = w(ii) * h(ii);
+    S(ii) = ((r^2) * asin(w(ii)/(2*r))) - ((w(ii)/4)*(4*(r^2)-(w(ii)^2))^(0.5));
 end
 
-Stot_w = sum(S_w);
-Stot_wh = sum(S_wh);
+Stot = mean(S);
 
 % Calculation of worn volume (V) in m^3
-V_w = (2 * pi * R * Stot_w/4);
-V_wh = (2 * pi * R * Stot_wh/4);
+V = (2 * pi * R * Stot);
 
 % Calculation of approximated worn volume (V) in m^3
-V_w_approx = (pi * (R) * (mean(w))^3)/(6*r);
+V_approx = (pi * (R) * (mean(w))^3)/(6*r);
 
 % Calculation of wear rate (wR) in (m^2/N) or un (m^3/(N.m))
-wR_w = V_w / (F*L);
-wR_w_approx = V_w_approx / (F*L);
-wR_wh = V_wh / (F*L);
+wR = V / (F*L);
+wR_approx = V_approx / (F*L);
 
 % Calculation of wear rate (wR) in (mm^3/(N.m))
-wR_w = (V_w * 1e9) / (F*L);
-wR_w_approx = (V_w_approx * 1e9) / (F*L);
-wR_wh = (V_wh * 1e9) / (F*L);
+wR = (V * 1e9) / (F*L);
+wR_approx = (V_approx * 1e9) / (F*L);
 
 end
