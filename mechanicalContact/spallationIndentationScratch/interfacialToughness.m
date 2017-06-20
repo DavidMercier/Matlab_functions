@@ -1,6 +1,6 @@
 %% Copyright 2014 MERCIER David
-function Kc = toughness(Gamma, Eint, varargin)
-%% Calculation of toughness
+function Kc_int = interfacialToughness(Gamma, Eint, varargin)
+%% Calculation of interfacial toughness
 % From J. Malzbender et al., "Measuring mechanical properties of coatings: 
 % a methodology applied to nano-particle-filled sol–gel coatings on glass",
 % Materials Science and Engineering: R: Reports, 36(2), 47-103, 2002.
@@ -17,6 +17,6 @@ if nargin < 1
     Eint = 20;
 end
 
-Kc = ((Gamma*1e-6) * (Eint*1e3))^(0.5);
+Kc_int = ((Gamma*1e-6) * (Eint*1e3))^(0.5);
 
 end
