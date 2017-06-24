@@ -10,7 +10,7 @@ function Gamma = fractureEnergy_Thouless(E, t, a, L, beta, varargin)
 
 % E: Elastic modulus in GPa
 % t: Coating thickness in µm
-% a: Length of indenter edge in contact with the chip in µm
+% a: Half length of indenter edge in contact with the chip in µm
 % L: Chip length in µm
 % beta: Angle between radial crack and scratch direction (for scratch test)
 % or direction normale to the indenter edge (for indentation test) in
