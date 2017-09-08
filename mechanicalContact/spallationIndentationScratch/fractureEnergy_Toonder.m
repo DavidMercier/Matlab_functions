@@ -19,7 +19,7 @@ function Gamma = fractureEnergy_Toonder(E, nu, t, sigmaRes, a, L, beta, varargin
 % nu: Poisson's coefficient (0 to 0.5)
 % t: Coating thickness in µm
 % sigmaRes: residual stress in GPa
-% a: Length of indenter edge in contact with the chip in µm
+% a: Half length of indenter edge in contact with the chip in µm
 % L: Chip length in µm
 % beta: Angle between radial crack and scratch direction (for scratch test)
 % or direction normale to the indenter edge (for indentation test) in
