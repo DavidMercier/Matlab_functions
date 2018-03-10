@@ -13,7 +13,7 @@ b = 114; % inner radius of the middle surface
 ab_ratio = a/b;
 
 % Disk mechanical properties
-E = 220; % elastic modulus in GPa
+E = [190 210]; % elastic modulus in GPa
 nu = 0.3; % Poisson's coefficient
 
 % Constants
@@ -25,40 +25,58 @@ C2 = (6/(pi*log(ab_ratio)))*((ab_ratio-1)/2);
 %% Load and stresses calculations
 delta = 0:0.1:10; % deflection in mm
 
-% Load in kN
-P = (E.*delta)./((1-(nu^2)).*(M.*a.^2)).*...
-    (((h-delta).*(h-(delta./2)).*t)+(t.^3));
-
-%           A
-% /--------/   \--------\
-%/--------/     \--------\
-%        B
-
-% Stress at point A in GPa
-sA = (-E.*delta)./((1-(nu^2)).*(M.*a.^2)).*...
-    (C1.*(h-(delta./2))+(C2.*t));
-
-% Stress at point B in GPa
-sB = (-E.*delta)./((1-(nu^2)).*(M.*a.^2)).*...
-    (C1.*(h-(delta./2))-(C2.*t));
-
+for ii = 1:length(E)
+    % Load in kN
+    P(:,ii) = ((E(ii).*delta)./((1-(nu^2)).*(M.*a.^2)).*...
+        (((h-delta).*(h-(delta./2)).*t)+(t.^3)))';
+    
+    %           A
+    % /--------/   \--------\
+    %/--------/     \--------\
+    %        B
+    
+    % Stress at point A in GPa
+    sA(:,ii) = (-E(ii).*delta)./((1-(nu^2)).*(M.*a.^2)).*...
+        (C1.*(h-(delta./2))+(C2.*t));
+    
+    % Stress at point B in GPa
+    sB(:,ii) = (-E(ii).*delta)./((1-(nu^2)).*(M.*a.^2)).*...
+        (C1.*(h-(delta./2))-(C2.*t));
+end
 %% Plots
+colorPlot = ['r+' 'bx'];
+
 figure;
-h1 = plot(delta, P, 'r+');
-xlabel('Deflection (mm)');
-ylabel('Load (kN)');
+for ii = 1:length(E)
+    h1(ii) = plot(delta, P(:,ii), colorPlot(ii));
+    xlabel('Deflection (mm)');
+    ylabel('Load (kN)');
+    hold on
+end
+legend(strcat('E=',num2str(E(1)),'GPa'), ...
+    strcat('E=',num2str(E(2)),'GPa'));
 grid on;
 
 figure;
-h2 = plot(P, sA, 'r+');
-xlabel('Load (kN)');
-ylabel('Stress at point A (GPa)');
+for ii = 1:length(E)
+    h2(ii) = plot(P(:,ii), sA(:,ii), colorPlot(ii));
+    xlabel('Load (kN)');
+    ylabel('Stress at point A (GPa)');
+    hold on
+end
+legend(strcat('E=',num2str(E(1)),'GPa'), ...
+    strcat('E=',num2str(E(2)),'GPa'));
 grid on;
 
 figure;
-h3 = plot(P, sB, 'r+');
-xlabel('Load (kN)');
-ylabel('Stress at point B (GPa)');
+for ii = 1:length(E)
+    h3(ii) = plot(P(:,ii), sB(:,ii), colorPlot(ii));
+    xlabel('Load (kN)');
+    ylabel('Stress at point B (GPa)');
+    hold on
+end
+legend(strcat('E=',num2str(E(1)),'GPa'), ...
+    strcat('E=',num2str(E(2)),'GPa'));
 grid on;
 
 set([h1, h2, h3], 'Linewidth', 2);
