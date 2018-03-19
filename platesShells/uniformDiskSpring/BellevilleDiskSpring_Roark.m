@@ -7,7 +7,7 @@ close all;
 %% Constants definition
 % Disk geometry in mm
 t = 12; % thickness
-h = 17.8; % cone height
+h = 18; % cone height
 a = 225; % outer radius of the middle surface
 b = 114; % inner radius of the middle surface
 ab_ratio = a/b;
