@@ -7,6 +7,4 @@ Developed with Matlab R2014a and R2015a.
 
 Author
 ----------
-Written by D. Mercier [1] (david.mercier@crmgroup.be / david9684@gmail.com).
-
-[1] CRM Group, 4000 Liège, Belgium (`www.crmgroup.be <www.crmgroup.be>`_)
+Written by D. Mercier (david9684@gmail.com).
