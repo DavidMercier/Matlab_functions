@@ -4,17 +4,21 @@ function voigtReussHillAverage = VoigtReussHillAverage(property, volumeFraction,
 
 % author: david9684@gmail.com
 
-if nargin < 2
-    volumeFraction = [20 30 50]/100; % in %
-end
-
 if nargin < 1
     property = [10 20 30]; % in the unit of the property
+end
+
+if nargin < 2
+    l_p = length(property);
+    r = rand(1, l_p);
+    volumeFraction = r / sum(r); % in % 
 end
 
 voigtAverage = sum(volumeFraction .* property);
 reussAverage = (sum(volumeFraction ./ property))^(-1);
 
+disp(property);
+disp(volumeFraction);
 voigtReussHillAverage = (voigtAverage+reussAverage)/2;
 
 end
